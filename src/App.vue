@@ -1,25 +1,24 @@
+<!-- src/App.js -->
 <template>
-  <div className="app">
-    <header className="app-header">
-      <img :src="logo" className="app-logo" alt="logo" />
-      <p>
-        Edit <code>src/app.js</code> and save to reload.
-      </p>
-      <a
-        className="app-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn Vue
-      </a>
-    </header>
+  <div class="app">
   </div>
+  <Navbar></Navbar>
+  <router-link to="/list">Countries list</router-link> |
+  <router-link to="/">Index</router-link>
+  <router-view></router-view>
+ 
+  
 </template>
 
 <script>
   import logo from './logo.svg';
+ 
+  import Navbar from './components/Navbar.vue';
   export default {
+    components: {
+      
+      Navbar
+    },
     data: () => ({
       logo
     })
