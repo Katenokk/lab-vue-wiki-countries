@@ -1,26 +1,37 @@
 <!-- src/App.js -->
 <template>
-  <div class="app">
-  </div>
-  <Navbar></Navbar>
-  <router-link to="/list">Countries list</router-link> |
-  <router-link to="/">Index</router-link>
-  <router-view></router-view>
  
+  <Navbar></Navbar>
+  <!-- <router-link to="/list">Countries list</router-link> | -->
+  
+  <!-- <router-view></router-view> -->
+ <div class="container">
+    <div class="row">
+      <div class="col-5" style="max-height: 90vh; overflow: scroll">
+        <CountriesList/>
+      </div>
+      <div class="col-7">
+        <CountryDetails/>
+      </div>
+    </div>
+  </div>
   
 </template>
 
 <script>
-  import logo from './logo.svg';
  
-  import Navbar from './components/Navbar.vue';
+import CountriesList from './components/CountriesList.vue'
+import CountryDetails from './components/CountryDetails.vue'
+import Navbar from './components/Navbar.vue';
   export default {
     components: {
       
-      Navbar
+      Navbar,
+      CountriesList,
+      CountryDetails
     },
     data: () => ({
-      logo
+     
     })
   }
 </script>
